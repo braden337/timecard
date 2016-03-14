@@ -1,0 +1,12 @@
+$brand: hsla(190, 50%, 50%, 1);
+$darkerBrand: hsla(190, 50%, 25%, 1);
+
+body {
+  background-color: $brand;
+  color: $darkerBrand;
+  font-size: 20px;
+}
+
+p {
+  font-size: 1em;
+}
