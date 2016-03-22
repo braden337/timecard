@@ -4,6 +4,10 @@ var babel = require('gulp-babel');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
+
+
+
+
 gulp.task('styles', function() {
   return gulp.src('src/scss/style.scss')
     .pipe(sass().on('error', sass.logError))
@@ -11,17 +15,32 @@ gulp.task('styles', function() {
     .pipe(reload({ stream: true }));
 });
 
+
+
 gulp.task('scripts', function() {
   return gulp.src('src/js/main.js')
     .pipe(babel({presets: ['es2015']}))
+    .on('error', function(e) {
+      console.log('>>> ERROR', e.message);
+      // emit here
+      this.emit('end');
+    })
     .pipe(gulp.dest('dist/js'))
     .pipe(reload({ stream: true }));
 });
+
+
 
 gulp.task('html', function() {
   return gulp.src('index.html')
     .pipe(reload({ stream: true }));
 });
+
+
+
+
+
+gulp.task('build', ['styles', 'scripts']);
 
 gulp.task('default', ['styles', 'scripts'], function() {  
   
