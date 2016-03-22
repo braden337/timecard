@@ -7,6 +7,24 @@ body {
   font-size: 20px;
 }
 
+#flash {
+  display: none;
+  margin-top: 10px;
+}
+
+#header {
+  // margin-top: 2em;
+  div {
+    h1 {
+      font-size: 7em;
+      outline: 0px solid transparent;
+    }
+    h2 {
+      font-size: 4em;
+    }
+  }
+}
+
 small {
   font-family: monospace;
 }

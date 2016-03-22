@@ -3,5 +3,16 @@ body {
   color: #205560;
   font-size: 20px; }
 
+#flash {
+  display: none;
+  margin-top: 10px; }
+
+#header div h1 {
+  font-size: 7em;
+  outline: 0px solid transparent; }
+
+#header div h2 {
+  font-size: 4em; }
+
 small {
   font-family: monospace; }

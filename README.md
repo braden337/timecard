@@ -1,11 +1,4 @@
-## Gulp-Starter
-
-Includes the things:
-
-- Jquery
-- Bootstrap
-- Sass
-- BrowserSync
+## Timecard
 
 Hello hello, run these commands to get up and running:
 
